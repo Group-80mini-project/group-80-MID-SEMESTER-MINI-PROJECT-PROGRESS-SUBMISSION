@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group 80 mini project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" defer></script>
+    <script src="https://use.fontawesome.com/0924484589.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/chat.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+		<link rel="stylesheet" type="text/css" href="Styles/Lib/code.css/code.css">
+
+		<link rel="stylesheet" type="text/css" href="Styles/Style.css">
+
+		<script type="text/javascript" src="Scripts/Patterns.js"></script>
+		<script type="text/javascript" src="Scripts/Answers.js"></script>
+
+		<script type="text/javascript" src="Scripts/BRIGADE.js"></script>
+
+		<script type="text/javascript" src="Scripts/ChatScreen.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <h1 class="navbar-item" id="h1-title">CODE BRIGADE WEB CHAT</h1>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <p class="buttons">
+                <p id="sound-p"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
+                <div class="onoffswitch" id="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sound-control" checked>
+                  <label class="onoffswitch-label" for="sound-control">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+                <a class="button" id="theme-button">🌗 Theme</a>  
+                <a id="gh-button" class="button" target="_blank">
+                <span class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="GrayBox" id="GrayBox">
+        <div class="LanguageSelectionArea">
+            <div class="Button" id="PortugueseButton">Português</div>
+            <div class="Button" id="EnglishButton">English</div>
+        </div>
+    </div>
+
+    <div class="MessagesArea" id="MessagesArea"></div>
+
+    <div class="Bottom">
+        <input type="text" name="MessageEntry" class="MessageEntry" id="MessageEntry" placeholder="Type your message...">
+    </div>
+
+
+    <script type="text/javascript">
+        var PortugueseButton = document.getElementById("PortugueseButton");
+        var EnglishButton = document.getElementById("EnglishButton");
+
+        PortugueseButton.addEventListener ("mousedown", function (Event) {
+            BRIGADE.Language = "Portuguese";
+
+            var GrayBox = document.getElementById ("GrayBox");
+            GrayBox.parentNode.removeChild (GrayBox);
+
+            ChatScreen.Input.setAttribute("placeholder", "Digite sua mensagem...");
+
+        });
+
+        EnglishButton.addEventListener ("mousedown", function (Event) {
+            BRIGADE.Language = "English";
+
+            var GrayBox = document.getElementById ("GrayBox");
+            GrayBox.parentNode.removeChild (GrayBox);
+
+            ChatScreen.Input.setAttribute("placeholder", "Type your message...");
+
+        });
+        ChatScreen.Start ();
+    </script>
+</div>
+  </body>
+</html>
