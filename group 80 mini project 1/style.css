@@ -108,7 +108,7 @@ body.dark {
 
 .Bottom {
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	position: fixed;
 	bottom: 0px;
 	border-top: 1px solid #CCC;
@@ -130,9 +130,22 @@ body.dark {
 	color: #fff;
 }
 
+#login-page {
+   margin-top: 150px;
+   text-align: center;
+}
+
+#login-label {
+   color: var(--text-color);
+}
+
+#login-form {
+   width: 40%;
+}
+
 .LanguageSelectionArea {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
@@ -151,10 +164,6 @@ body.dark {
 
 .Button:hover {
 	background-color: rgb(204, 250, 192);
-}
-
-#gh-button {
-   margin-left: 6px;
 }
 
 .onoffswitch {
@@ -243,8 +252,7 @@ body.dark {
    font-weight: bold;
 }
 
-#theme-button,
-#gh-button {
+#theme-button {
    background-color: var(--background-color);
    color: var(--text-color);
    font-size: 18px;
@@ -260,7 +268,6 @@ body.dark {
       margin: 1px auto;
       height: 440px;
    }
-   #gh-button,
    #theme-button {
       width: 100%;
       border: 1px solid #fff;

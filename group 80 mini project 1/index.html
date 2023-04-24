@@ -59,6 +59,18 @@
       </nav>
     </header>
     <div class="GrayBox" id="GrayBox">
+      <section id="login-page" class="section">
+        <div id="login-form" class="container">
+          <h1 class="title" id="login-label">Enter your name</h1>
+          <div class="control has-icons-left">
+            <input type="text" id="username-input" placeholder="Username"  class="input is-success is-medium is-fullwidth" type="text" name="username" onkeydown="loginOnEnter()" autofocus maxlength=20>
+            <span class="icon is-left">
+            <i class="fa fa-user" id="user-icon"></i>
+            </span>
+            <span id="username-error"></span>
+          </div>
+        </div>
+      </section>
         <div class="LanguageSelectionArea">
             <div class="Button" id="PortugueseButton">Português</div>
             <div class="Button" id="EnglishButton">English</div>
